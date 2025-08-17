@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
+        .container { max-width: 600px; margin: auto; padding: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        h3, h4 { color: #555; }
+        img { max-width: 100%; height: auto; margin-top: 20px; border-radius: 10px; }
+        a { display: inline-block; margin-top: 25px; text-decoration: none; background-color: #6c757d; color: white; padding: 10px 20px; border-radius: 5px; }
+        a:hover { background-color: #5a6268; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        
+        <h3>Diagnosis: {{ diagnosis }}</h3>
+        <h4>Confidence: {{ confidence }}</h4>
+        
+        <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="Uploaded Image">
+        
+        <br>
+        
+        <a href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>
